@@ -3,7 +3,6 @@
 import roslib
 import sys
 import rospy
-import cv2
 import numpy as np
 import math
 import time
@@ -48,9 +47,8 @@ class Navigation(object):
 		[self.width_meters, self.height_meters] = GPS_to_local(nw_in, se_in)
 		self.width_meters = abs(self.width_meters)
 		self.height_meters = abs(self.height_meters)
-		print "origin: ", self.origin.longitude, ", ", self.origin.latitude
-		print "size: ", self.width_meters, ", ", self.height_meters
-
+		print ("origin: ", self.origin.longitude, ", ", self.origin.latitude)
+		print ("size: ", self.width_meters, ", ", self.height_meters)
 		print("DJI_Bridge::Navigation Initialized")
 
 	def global_to_local(self, g):

@@ -1,0 +1,6 @@
+<launch>
+   <arg name="test_environment_number" default="0"/>
+   <node name="human_bridge" pkg="human_bridge" type="human_bridge.py" output="screen">
+	   <param name="test_environment_number" value="$( arg test_environment_number )" />
+   </node>
+</launch>
